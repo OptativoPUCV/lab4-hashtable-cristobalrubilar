@@ -39,3 +39,18 @@ hashmap.c:60:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 d6f6319
+Wed 24 Apr 2024 01:22:56 PM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:56:21: error: ‘HashMapa’ undeclared (first use in this function); did you mean ‘HashMap’?
+   56 |   HashMap * mapa = (HashMapa *)malloc(sizeof(HashMap));
+      |                     ^~~~~~~~
+      |                     HashMap
+hashmap.c:56:21: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:56:31: error: expected expression before ‘)’ token
+   56 |   HashMap * mapa = (HashMapa *)malloc(sizeof(HashMap));
+      |                               ^
+Compilation failed
+b3708b4
