@@ -78,3 +78,13 @@ hashmap.c:47:42: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 343dc60
+Wed 24 Apr 2024 01:46:29 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:47:41: error: expected statement before ‘)’ token
+   47 |       if(map->buckets[posicion] == NULL))
+      |                                         ^
+Compilation failed
+de655b1
