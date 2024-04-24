@@ -117,3 +117,14 @@ Wed 24 Apr 2024 01:59:46 PM UTC:
  tests:  2|5
 total_score: 20/70
 8e62d18
+Wed 24 Apr 2024 02:02:33 PM UTC: 
+ hashmap.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:58:11: error: unused variable ‘mapaAux’ [-Werror=unused-variable]
+   58 |   Pair ** mapaAux = map->buckets;
+      |           ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e985d98
