@@ -70,12 +70,14 @@ HashMap * createMap(long capacity)
 
 void eraseMap(HashMap * map,  char * key) 
 {    
+  int posicion = hash(key,map->capacity);
   for (int i = 0 ; i < map->capacity ; i++)
     {
-        if (is_equal(map->buckets[i]->key,key))
-        {
-          map->buckets = NULL;
-        }
+      if(posicion == NULL)
+      {
+        map->buckets[posicion] = NULL;
+        map->size--;
+      }
     }
 
 }
