@@ -43,14 +43,14 @@ long obtenerPosicionValida(HashMap * map, char * key, void * value)
   long posicion = hash(key, map->capacity);
   while(map->buckets[posicion] != NULL && map->buckets[posicion]->key != key)
     {
-      posicion = posicion + 1 % map->capacity;
+      posicion = (posicion + 1) % map->capacity;
     }
   return posicion;
 }
 
 void insertMap(HashMap * map, char * key, void * value) 
 {
-  long posicion = obtenerPosicionValida(key,map->capacity);
+  long posicion = obtenerPosicionValida(map, key, value);
   map->buckets[posicion] = createPair(key,value);
   (map->size)++;
   map->current = posicion;

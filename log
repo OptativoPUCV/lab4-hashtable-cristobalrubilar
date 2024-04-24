@@ -583,3 +583,9 @@ hashmap.c:41:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 f7dc3c5
+Wed 24 Apr 2024 06:54:27 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  11|3
+total_score: 40/70
+16b9907
