@@ -49,6 +49,11 @@ void insertMap(HashMap * map, char * key, void * value)
         map->buckets[posicion] = createPair(key,value);
         map->size++;
       }
+      else if(is_equal(map->buckets[posicion]->key,key))
+      {
+          map->buckets[posicion]->value = value;
+          return;
+      }
     }
 }
 
