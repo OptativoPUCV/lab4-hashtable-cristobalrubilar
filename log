@@ -496,3 +496,8 @@ hashmap.c:62:8: error: unused variable ‘nuevaPosValida’ [-Werror=unused-vari
 cc1: all warnings being treated as errors
 Compilation failed
 2ea219d
+Wed 24 Apr 2024 06:45:33 PM UTC: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+ tests:  0|0
+9c3e627

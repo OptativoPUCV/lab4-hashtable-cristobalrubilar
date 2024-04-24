@@ -60,7 +60,11 @@ void insertMap(HashMap * map, char * key, void * value)
   }
 
   long nuevaPosValida = obtenerPosicionValida(map,key,value);
-    
+  if (nuevaPosValida != posicion)
+  {
+    map->buckets[nuevaPosValida] = datos;
+    (map->size)++;
+  }
   
 }
 
