@@ -46,17 +46,18 @@ void insertMap(HashMap * map, char * key, void * value)
   {
     map->buckets[posicion] = createPair(key, value);
     (map->size)++;
+    (map->current) = posicion;
     return;
   }
   else
   {
-    printf("entra");
     for (int i = 0; i < map->capacity; i++)
       {
         if (map->buckets[i] == NULL )
         {
           map->buckets[i] = createPair(key, value);
           (map->size)++;
+          (map->current) = i;
           return;
         }
       }
