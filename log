@@ -245,3 +245,15 @@ Wed 24 Apr 2024 02:44:26 PM UTC:
  tests:  3|5
 total_score: 20/70
 6f0b84e
+Wed 24 Apr 2024 02:47:00 PM UTC: 
+ hashmap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c:51:3: error: expected identifier or ‘(’ before ‘else’
+   51 |   else
+      |   ^~~~
+hashmap.c:63:1: error: expected identifier or ‘(’ before ‘}’ token
+   63 | }
+      | ^
+Compilation failed
+fe52a66
