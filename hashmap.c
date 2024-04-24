@@ -45,6 +45,7 @@ long obtenerPosicionValida(HashMap * map, char * key, void * value)
     {
       i++;
     }
+  return i;
 }
 
 void insertMap(HashMap * map, char * key, void * value) 

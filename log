@@ -485,3 +485,14 @@ hashmap.c:48:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 fe6bd17
+Wed 24 Apr 2024 06:44:48 PM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:62:8: error: unused variable ‘nuevaPosValida’ [-Werror=unused-variable]
+   62 |   long nuevaPosValida = obtenerPosicionValida(map,key,value);
+      |        ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2ea219d
