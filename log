@@ -128,3 +128,8 @@ hashmap.c:58:11: error: unused variable ‘mapaAux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 e985d98
+Wed 24 Apr 2024 02:02:47 PM UTC: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  0|0
+c22d14e
