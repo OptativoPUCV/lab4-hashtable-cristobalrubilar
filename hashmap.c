@@ -50,7 +50,7 @@ void insertMap(HashMap * map, char * key, void * value)
   else{
     for(int i = 0 ; i < map->capacity ; i++)
       {
-        if(is_equal(map->buckets[posicion]->key,key) == 1)return;
+        if(is_equal(map->buckets[i]->key,key) == 1)return;
         if(map->buckets[i] == NULL)
         {
           map->buckets[i] = createPair(key,value);
