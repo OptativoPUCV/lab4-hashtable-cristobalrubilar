@@ -51,8 +51,7 @@ long obtenerPosicionValida(HashMap * map, char * key, void * value)
 void insertMap(HashMap * map, char * key, void * value) 
 {
   long posicion = obtenerPosicionValida(key,map->capacity);
-  Pair *datos = createPair(key,value);
-  map->buckets[posicion] = datos;
+  map->buckets[posicion] = createPair(key,value);
   (map->size)++;
   map->current = posicion;
 }

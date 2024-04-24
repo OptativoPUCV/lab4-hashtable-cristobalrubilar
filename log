@@ -553,3 +553,33 @@ hashmap.c:41:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 32fede9
+Wed 24 Apr 2024 06:53:32 PM UTC: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:53:41: error: passing argument 1 of ‘obtenerPosicionValida’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   53 |   long posicion = obtenerPosicionValida(key,map->capacity);
+      |                                         ^~~
+      |                                         |
+      |                                         char *
+hashmap.c:41:38: note: expected ‘HashMap *’ {aka ‘struct HashMap *’} but argument is of type ‘char *’
+   41 | long obtenerPosicionValida(HashMap * map, char * key, void * value)
+      |                            ~~~~~~~~~~^~~
+hashmap.c:53:48: error: passing argument 2 of ‘obtenerPosicionValida’ makes pointer from integer without a cast [-Werror=int-conversion]
+   53 |   long posicion = obtenerPosicionValida(key,map->capacity);
+      |                                             ~~~^~~~~~~~~~
+      |                                                |
+      |                                                long int
+hashmap.c:41:50: note: expected ‘char *’ but argument is of type ‘long int’
+   41 | long obtenerPosicionValida(HashMap * map, char * key, void * value)
+      |                                           ~~~~~~~^~~
+hashmap.c:53:19: error: too few arguments to function ‘obtenerPosicionValida’
+   53 |   long posicion = obtenerPosicionValida(key,map->capacity);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+hashmap.c:41:6: note: declared here
+   41 | long obtenerPosicionValida(HashMap * map, char * key, void * value)
+      |      ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f7dc3c5
