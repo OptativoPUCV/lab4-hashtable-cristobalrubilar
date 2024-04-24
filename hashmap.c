@@ -70,20 +70,7 @@ void insertMap(HashMap * map, char * key, void * value)
 
 void enlarge(HashMap * map) 
 {
-  enlarge_called = 1; //no borrar (testing purposes
-  Pair ** antiguoMap = map->buckets;
-  long antiguaCapacidad = map->capacity;
-  long nuevaCapacidad = antiguaCapacidad * 2;
-  map->buckets = (Pair **)calloc(nuevaCapacidad, sizeof(Pair *));
-  map->capacity = nuevaCapacidad;
-  map->size = 0;
-  for (long i = 0 ; i < map->capacity ; i++)
-  {
-    if (antiguoMap[i] != NULL)
-    {
-      insertMap(map, antiguoMap[i]->key, antiguoMap[i]->value);
-    }
-  }
+
 }
 
 
