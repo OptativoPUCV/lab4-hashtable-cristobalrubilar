@@ -40,12 +40,12 @@ int is_equal(void* key1, void* key2){
 
 long obtenerPosicionValida(HashMap * map, char * key, void * value)
 {
-  long i = 0;
-  while(map->buckets[i] != NULL)
+  long posicion = hash(key, map->capacity);
+  while(map->buckets[posicion]->key != NULL && map->buckets[posicion]->key != key)
     {
-      i++;
+      posicion = posicion + 1 % map->capacity;
     }
-  return i;
+  return posicion;
 }
 
 void insertMap(HashMap * map, char * key, void * value) 
@@ -68,6 +68,7 @@ void insertMap(HashMap * map, char * key, void * value)
     map->current = nuevaPosValida;
   }
   
+    
 }
 
 void enlarge(HashMap * map) 
