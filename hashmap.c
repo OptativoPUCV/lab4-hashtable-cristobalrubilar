@@ -52,7 +52,7 @@ void insertMap(HashMap * map, char * key, void * value)
   {
     for (int i = 0; i < map->capacity; i++)
       {
-        if (map->buckets[i] == NULL)
+        if (map->buckets[i] == NULL )
         {
           map->buckets[i] = createPair(key, value);
           (map->size)++;
@@ -95,9 +95,18 @@ Pair * searchMap(HashMap * map,  char * key) {
     return NULL;
 }
 
-Pair * firstMap(HashMap * map) {
-
-    return NULL;
+Pair * firstMap(HashMap * map) 
+{
+    for (long i = 0; i < map->capacity; i++)
+      {
+        Pair* pair = map->buckets[i];
+        if (pair != NULL)
+        {
+          map->current = i;
+          return pair;
+        }
+      }
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
