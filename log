@@ -60,3 +60,21 @@ Wed 24 Apr 2024 01:23:13 PM UTC:
  tests:  1|5
 total_score: 10/70
 2652f7b
+Wed 24 Apr 2024 01:46:21 PM UTC: 
+ hashmap.c | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:47:41: error: expected statement before ‘]’ token
+   47 |       if(map->buckets[posicion] == NULL)])
+      |                                         ^
+hashmap.c:47:7: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   47 |       if(map->buckets[posicion] == NULL)])
+      |       ^~
+hashmap.c:47:42: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   47 |       if(map->buckets[posicion] == NULL)])
+      |                                          ^
+hashmap.c:47:42: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+343dc60
