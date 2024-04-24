@@ -41,7 +41,7 @@ int is_equal(void* key1, void* key2){
 long obtenerPosicionValida(HashMap * map, char * key, void * value)
 {
   long i = 0;
-  while(map->buckets[i]->key != NULL)
+  while(map->buckets[i] != NULL)
     {
       i++;
     }
