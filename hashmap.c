@@ -55,13 +55,6 @@ void insertMap(HashMap * map, char * key, void * value)
 void enlarge(HashMap * map) 
 {
   enlarge_called = 1; //no borrar (testing purposes
-  int antiguaCapacidad = map->capacity;
-  int nuevaCapacidad = antiguaCapacidad * 2;
-
-  map->buckets = (Pair **)malloc(nuevaCapacidad * sizeof(Pair *));
-
-  
-
 }
 
 
@@ -75,8 +68,10 @@ HashMap * createMap(long capacity)
   return mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
-
+void eraseMap(HashMap * map,  char * key) 
+{    
+  int posicion = hash(key,map->capacity);
+  map->buckets[posicion] = NULL;
 
 }
 
