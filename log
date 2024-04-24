@@ -133,3 +133,14 @@ Wed 24 Apr 2024 02:02:47 PM UTC:
  1 file changed, 1 deletion(-)
  tests:  0|0
 c22d14e
+Wed 24 Apr 2024 02:07:51 PM UTC: 
+ hashmap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:58:10: error: unused variable ‘mapaAux’ [-Werror=unused-variable]
+   58 |   Pair **mapaAux = map->buckets;
+      |          ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+27ce3d2
