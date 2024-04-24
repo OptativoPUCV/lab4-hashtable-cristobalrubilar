@@ -38,31 +38,29 @@ int is_equal(void* key1, void* key2){
     return 0;
 }
 
+long obtenerPosicionValida(HashMap * map, char * key, void * value)
+{
+  long i = 0;
+  while(map->buckets[i]->key != NULL)
+    {
+      i++;
+    }
+}
 
 void insertMap(HashMap * map, char * key, void * value) 
 {
   long posicion = hash(key,map->capacity);
+  Pair *datos = createPair(key,value);
+
   if (map->buckets[posicion] == NULL)
   {
-    map->buckets[posicion] = createPair(key, value);
+    map->buckets[posicion] = datos;
     (map->size)++;
-    (map->current) = posicion;
-    return;
   }
-  else
-  {
-    for (long i = posicion; i < map->capacity ; i++)
-      {
-        i = i % map->capacity;
-        if (map->buckets[i] == NULL )
-        {
-          map->buckets[i] = createPair(key, value);
-          (map->size)++;
-          (map->current) = i;
-          return;
-        }
-      }
-  }
+
+  long nuevaPosValida = obtenerPosicionValida(map,key,value);
+    
+  
 }
 
 void enlarge(HashMap * map) 
