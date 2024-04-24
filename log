@@ -171,3 +171,8 @@ hashmap.c:75:26: error: ‘*(map->buckets + (sizetype)((long unsigned int)i * 8)
       |                          ->
 Compilation failed
 f1d1d8c
+Wed 24 Apr 2024 02:17:29 PM UTC: 
+ hashmap.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+ tests:  0|0
+cef105a
