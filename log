@@ -790,3 +790,25 @@ Thu 25 Apr 2024 11:32:35 PM UTC:
  1 file changed, 6 insertions(+), 3 deletions(-)
  tests:  0|0
 f87234b
+Thu 25 Apr 2024 11:34:13 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:70:50: error: dereferencing ‘void *’ pointer [-Werror]
+   70 |         insertMap(nuevoMap, *antiguoMap[i]->key, *antiguoMap[i]->value);
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~
+hashmap.c:70:29: error: passing argument 2 of ‘insertMap’ makes pointer from integer without a cast [-Werror=int-conversion]
+   70 |         insertMap(nuevoMap, *antiguoMap[i]->key, *antiguoMap[i]->value);
+      |                             ^~~~~~~~~~~~~~~~~~~
+      |                             |
+      |                             char
+hashmap.c:51:38: note: expected ‘char *’ but argument is of type ‘char’
+   51 | void insertMap(HashMap * map, char * key, void * value)
+      |                               ~~~~~~~^~~
+hashmap.c:70:50: error: invalid use of void expression
+   70 |         insertMap(nuevoMap, *antiguoMap[i]->key, *antiguoMap[i]->value);
+      |                                                  ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+fba6369
