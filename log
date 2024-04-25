@@ -595,3 +595,32 @@ Thu 25 Apr 2024 10:33:08 PM UTC:
  tests:  11|3
 total_score: 40/70
 fe4070f
+Thu 25 Apr 2024 10:47:42 PM UTC: 
+ hashmap.c | 25 +++++++++----------------
+ 1 file changed, 9 insertions(+), 16 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:87:78: error: passing argument 1 of ‘strcmp’ makes pointer from integer without a cast [-Werror=int-conversion]
+   87 |   while(map->buckets[posicion] != NULL || strcmp(map->buckets[posicion]->key != key))
+      |                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+      |                                                                              |
+      |                                                                              int
+In file included from test.c:3:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/string.h:156:32: note: expected ‘const char *’ but argument is of type ‘int’
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |                    ~~~~~~~~~~~~^~~~
+In file included from test.c:4:
+hashmap.c:87:43: error: too few arguments to function ‘strcmp’
+   87 |   while(map->buckets[posicion] != NULL || strcmp(map->buckets[posicion]->key != key))
+      |                                           ^~~~~~
+In file included from test.c:3:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/string.h:156:12: note: declared here
+  156 | extern int strcmp (const char *__s1, const char *__s2)
+      |            ^~~~~~
+In file included from test.c:4:
+hashmap.c:85:10: error: unused variable ‘aux’ [-Werror=unused-variable]
+   85 |   Pair **aux = map->buckets;
+      |          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+fdf5ff5
