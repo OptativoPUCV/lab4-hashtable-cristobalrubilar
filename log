@@ -624,3 +624,14 @@ hashmap.c:85:10: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 fdf5ff5
+Thu 25 Apr 2024 10:48:44 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:85:10: error: unused variable ‘aux’ [-Werror=unused-variable]
+   85 |   Pair **aux = map->buckets;
+      |          ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+bd733a4
