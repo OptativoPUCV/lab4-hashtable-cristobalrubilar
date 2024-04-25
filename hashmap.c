@@ -67,7 +67,7 @@ void enlarge(HashMap * map)
     {
       if(antiguoMap[i] != NULL)
       {
-        insertMap(nuevoMap, *antiguoMap[i]->key, *antiguoMap[i]->value);
+        insertMap(nuevoMap, antiguoMap[i]->key, antiguoMap[i]->value);
         free(antiguoMap[i]);
         (nuevoMap->size)++;
       }

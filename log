@@ -812,3 +812,8 @@ hashmap.c:70:50: error: invalid use of void expression
 cc1: all warnings being treated as errors
 Compilation failed
 fba6369
+Thu 25 Apr 2024 11:34:57 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+331fec4
