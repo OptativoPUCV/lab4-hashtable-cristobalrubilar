@@ -63,7 +63,7 @@ void enlarge(HashMap * map)
   long nuevaCapacidad = map->capacity *= 2;
   HashMap *nuevoMap = createMap(nuevaCapacidad);
   
-  for(int i = 0 ; i < nuevaCapacidad ; i++)
+  for(int i = 0 ; i < map->capacity ; i++)
     {
       if(antiguoMap[i] != NULL)
       {
