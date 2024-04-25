@@ -80,7 +80,7 @@ void eraseMap(HashMap * map,  char * key)
     {
       posicion = (posicion + 1) % map->capacity;
     }
-  if(strcmp(map->buckets[posicion]->key, key) == 0)
+  if(strcmp(map->buckets[posicion]->key, key) == 1)
   {
     map->current = posicion;
     map->buckets[posicion] = NULL;
