@@ -635,3 +635,17 @@ hashmap.c:85:10: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 bd733a4
+Thu 25 Apr 2024 10:49:12 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:85:15: error: initialization of ‘Pair *’ from incompatible pointer type ‘Pair **’ [-Werror=incompatible-pointer-types]
+   85 |   Pair *aux = map->buckets;
+      |               ^~~
+hashmap.c:85:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   85 |   Pair *aux = map->buckets;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+a79247a
