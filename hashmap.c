@@ -58,7 +58,8 @@ void insertMap(HashMap *map, char *key, void *value) {
 void enlarge(HashMap *map) {
   enlarge_called = 1;
   Pair **antiguoMap = map->buckets;
-  long nuevaCapacidad = map->capacity *= 2;
+  map->capacity *= 2;
+  long nuevaCapacidad = map->capacity;
   HashMap *nuevoMap = createMap(nuevaCapacidad);
 
   for (int i = 0; i < map->capacity; i++) {
