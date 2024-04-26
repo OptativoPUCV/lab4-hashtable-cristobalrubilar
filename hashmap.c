@@ -63,13 +63,13 @@ void enlarge(HashMap *map) {
 
   for (int i = 0; i < map->capacity; i++) {
     if (antiguoMap[i] != NULL) {
-      //insertMap(nuevoMap, antiguoMap[i]->key, antiguoMap[i]->value);
-      free(antiguoMap[i]);
+      insertMap(nuevoMap, antiguoMap[i]->key, antiguoMap[i]->value);
+      //free(antiguoMap[i]);
       (nuevoMap->size)++;
       
     }
   }
-  free(antiguoMap);
+  //free(antiguoMap);
   map->buckets = nuevoMap->buckets;
   map->capacity = nuevaCapacidad;
   map->size = nuevoMap->size;
